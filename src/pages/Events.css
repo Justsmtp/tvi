@@ -1,0 +1,17 @@
+/* Events: programme list with "Coming soon" tags */
+.programme-head { margin: 3.5rem 0 1.75rem; }
+.programme-head h3 { font-family: var(--font-display); font-size: clamp(1.5rem, 3vw, 2rem); color: var(--green-primary); margin-bottom: 0.5rem; }
+.programme-head p { color: var(--text-muted); font-size: 1.05rem; }
+.emerge-item { flex-wrap: wrap; }
+.emerge-name { flex: 1; min-width: 0; }
+.soon-tag {
+  margin-left: auto; white-space: nowrap;
+  font-size: 0.72rem; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase;
+  color: var(--gold-dark); background: rgba(164, 134, 91, 0.14);
+  padding: 0.4rem 0.8rem; border-radius: 999px;
+}
+.programme-close { margin-top: 2.5rem; font-family: var(--font-display); font-style: italic; font-weight: 700; font-size: clamp(1.15rem, 2.2vw, 1.45rem); line-height: 1.55; color: var(--green-primary); text-align: center; }
+@media (max-width: 560px) {
+  .emerge-name { flex: 1 1 calc(100% - 3.6rem); }
+  .soon-tag { margin-left: 3.5rem; }
+}

@@ -1,0 +1,27 @@
+.site-nav { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; background: var(--green-deep); box-shadow: 0 6px 24px -10px rgba(0,0,0,0.5); transition: box-shadow .3s ease; }
+.site-nav.scrolled { box-shadow: 0 4px 28px rgba(0,0,0,0.35); }
+.nav-bar-inner { display: flex; align-items: center; justify-content: space-between; height: var(--nav-h); gap: 1rem; }
+.nav-logo { display: flex; align-items: center; gap: 0.75rem; text-decoration: none; flex-shrink: 0; }
+.nav-logo img { height: 46px; width: 46px; object-fit: cover; border-radius: 8px; }
+.nav-logo span { display: flex; flex-direction: column; font-family: var(--font-display); font-size: 1rem; line-height: 1.15; }
+.nav-logo b { color: #fff; font-weight: 700; }
+.nav-logo b.gold { color: var(--gold-light); }
+
+.desk-nav { display: flex; align-items: center; gap: 0.5rem; }
+.desk-nav .nav-donate-btn { margin-left: 0.75rem; }
+.nav-link { color: rgba(255,255,255,0.88); text-decoration: none; font-weight: 700; font-size: 0.86rem; padding: 0.5rem 0.85rem; border-radius: 999px; white-space: nowrap; transition: color .2s, background-color .2s; }
+.nav-link:hover, .nav-link.active { color: var(--gold-light); background: rgba(255,255,255,0.08); }
+.nav-donate-btn { padding: 0.55rem 1.4rem; font-size: 0.86rem; }
+
+.mob-toggle { display: none; background: none; border: 0; cursor: pointer; color: #fff; width: 44px; height: 44px; align-items: center; justify-content: center; margin-right: -0.5rem; }
+
+.mob-menu { background: var(--green-deep); padding: 0.5rem 1.5rem 2rem; max-height: calc(100vh - var(--nav-h)); max-height: calc(100dvh - var(--nav-h)); overflow-y: auto; }
+.mob-link { display: block; color: rgba(255,255,255,0.9); text-decoration: none; font-weight: 700; padding: 0.95rem 0; border-bottom: 1px solid rgba(255,255,255,0.1); font-size: 1.02rem; }
+.mob-link.active { color: var(--gold-light); }
+.mob-menu .btn { margin-top: 1.25rem; width: 100%; }
+
+@media (max-width: 900px) {
+  .desk-nav { display: none; }
+  .mob-toggle { display: flex; }
+}
+@media (max-width: 380px) { .nav-logo img { height: 38px; width: 38px; } .nav-logo span { font-size: 0.9rem; } }

@@ -1,0 +1,4 @@
+/* Safety net against horizontal scrolling on small screens. */
+html, body { max-width: 100%; overflow-x: hidden; }
+main { overflow-x: clip; }
+h1, h2, h3 { overflow-wrap: break-word; }
